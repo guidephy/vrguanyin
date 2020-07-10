@@ -27,22 +27,21 @@
 <div  data-role="content">
 <div style="text-align:center;" >	
 	<input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入答案">  
-	<button id="sendBtn" >送出答案</button>
+	<button id="sendBtn" onclick="rank()" >送出答案</button>
 </div>	
 </div>
 		
    <script>
 	   
-    sendBtn = $('#sendBtn');
-	   
-    sendBtn.on('click',function() {
-    if(document.getElementById("answer1").value==""==943){
+
+    function rank(){
+      if(document.getElementById("answer1").value==""==943){
 	   alert("yes")}else{ 
            alert("no")
 	   };
-      }
+    }
 	   
-	   
+ 
 	   
    </script>
 
