@@ -35,8 +35,10 @@
 	   
 
     function rank(){
-      if(document.getElementById("answer1").value==""==943){
-	   alert("yes")}else{ 
+      if(document.getElementById("answer1").value=="943"){
+	   alert("yes")}else if(document.getElementById("answer1").value=="提示"){
+		alert("請從線索中找資料")   
+	   }else{ 
            alert("no")
 	   };
     }
