@@ -17,7 +17,7 @@
             if(this.id='sphere1'){
             el.setAttribute('color', '#24CAFF');  
             el.setAttribute('visible', 'false');
-            document.getElementById("baozhantext1").style.visibility='visible'; 
+          document.getElementById("baozhantext1").visible='true'; 
             
             }
           });
@@ -25,7 +25,7 @@
           el.addEventListener('mouseleave', function () {
             el.setAttribute('color', '#FFC65D');  
               el.setAttribute('visible', 'ture'); 
-            document.getElementById("baozhantext1").style.visibility='hidden'; 
+            document.getElementById("baozhantext1").visible='false'; 
           });
           
         } 
@@ -45,7 +45,7 @@
       <a-sphere position="20 6 0" radius="2" color="#FFC65D"  handle-events></a-sphere>
       
       <a-sphere position="0 0 -24" id='sphere1' radius="2" color="#FFC65D" handle-events></a-sphere>
-      <a-curvedimage id= "baozhantext1" style='visibility:hidden' src="img/baozhantext1.png" height="3.0" radius="5.7" position="0 0 -24" theta-length="72" ></a-curvedimage>
+      <a-curvedimage id= "baozhantext1" visible="false" src="img/baozhantext1.png" height="3.0" radius="5.7" position="0 0 -24" theta-length="72" ></a-curvedimage>
       
       <a-sphere position="2 -4 20" radius="2" color="#FFC65D" handle-events></a-sphere>
       <a-text value="Hello, World!"  color="#111" position="0 0 -20" wrap-count="50"></a-text>
