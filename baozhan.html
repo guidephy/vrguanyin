@@ -17,7 +17,7 @@
             if(this.id='sphere1'){
             el.setAttribute('color', '#24CAFF');  
             el.setAttribute('visible', 'false');
-          document.getElementById("baozhantext1").visible='true'; 
+          document.getElementById("baozhantext1").setAttribute('visible', 'true');
             
             }
           });
@@ -25,7 +25,7 @@
           el.addEventListener('mouseleave', function () {
             el.setAttribute('color', '#FFC65D');  
               el.setAttribute('visible', 'ture'); 
-            document.getElementById("baozhantext1").visible='false'; 
+            document.getElementById("baozhantext1").setAttribute('visible', 'false');
           });
           
         } 
