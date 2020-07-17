@@ -16,16 +16,16 @@
           el.addEventListener('mouseenter', function () {
             if(this.id=='sphere1'){
             el.setAttribute('visible', 'false');
-          document.getElementById("baozhantext1").setAttribute('visible', 'true');
-              alert('test');
+          //document.getElementById("baozhantext1").setAttribute('visible', 'true');
+              alert('主祀為開基媽祖娘娘，相傳由福建湄州分靈，安奉於現在廟的原址。');
             
             }else if(this.id=='sphere2'){
             el.setAttribute('visible', 'false');
-          document.getElementById("baozhantext2").setAttribute('visible', 'true');
+              alert('保障宮的內外有兩對非常長的大石龍柱，大概有三樓高。直徑含龍頭共6尺6寸，整支無接方式雕刻，現今龍柱紀錄無人能比，為"天下第一支');
             
             }else if(this.id=='sphere3'){
             el.setAttribute('visible', 'false');
-          document.getElementById("baozhantext3").setAttribute('visible', 'true');
+              alert('密碼第三位:保障宮共擁有幾根龍柱?');
             
             }
             
@@ -33,9 +33,8 @@
           
           el.addEventListener('mouseleave', function () {
               el.setAttribute('visible', 'ture'); 
-            document.getElementById("baozhantext1").setAttribute('visible', 'false');
-            document.getElementById("baozhantext2").setAttribute('visible', 'false');
-            document.getElementById("baozhantext3").setAttribute('visible', 'false');
+           // document.getElementById("baozhantext1").setAttribute('visible', 'false');
+           
           });
           
         } 
@@ -51,7 +50,7 @@
 
 <body>
  
-    <a-scene embedded width="100%" height="70%">
+    <a-scene >
       
       <a-sphere id='sphere1'  position="27.1 -5.58  4.725" radius="1.5" color="#FFC65D" handle-events></a-sphere>
       <a-image  id= "baozhantext1" position="20 6.49565 3.25951"  rotation="0 -90 0" visible="false" src="img/baozhantext1.png" height="15" width="15"  ></a-image>
