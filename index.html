@@ -36,7 +36,7 @@
 <div  data-role="content">
 <div style="text-align:center;" >	
 	<input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入密碼">  
-	<button id="sendBtn" onclick="rank()" >送出答案</button>
+	<button id="sendBtn" onclick="sendAns()" >送出答案</button>
 </div>	
 </div>
 	<div data-role="footer" data-position="fixed" data-theme="b">
@@ -48,13 +48,15 @@
    <script>
 	   
 
-    function rank(){
+    function sendAns(){
       if(document.getElementById("answer1").value=="124"){
 	   alert("yes");
 	   //document.getElementById("framelink").src="https://poly.google.com/view/bFEDXxVWbHS/embed?chrome=min";  
-		alert("請不要亂猜，從線索中找資料")   
+           alert("請等待新的關卡");		 
 	   }else{ 
-           alert("no")
+           
+		   
+           alert("請不要亂猜，從線索中找資料")  
 	   };
     }
 
