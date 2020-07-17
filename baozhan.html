@@ -15,17 +15,21 @@
           var el = this.el;  // <a-box>
           el.addEventListener('mouseenter', function () {
             if(this.id=='sphere1'){
-            el.setAttribute('color', '#24CAFF');  
             el.setAttribute('visible', 'false');
           document.getElementById("baozhantext1").setAttribute('visible', 'true');
             
+            }else if(this.id=='sphere2'){
+            el.setAttribute('visible', 'false');
+          document.getElementById("baozhantext2").setAttribute('visible', 'true');
+            
             }
+            
           });
           
           el.addEventListener('mouseleave', function () {
-            el.setAttribute('color', '#FFC65D');  
               el.setAttribute('visible', 'ture'); 
             document.getElementById("baozhantext1").setAttribute('visible', 'false');
+            document.getElementById("baozhantext2").setAttribute('visible', 'false');
           });
           
         } 
@@ -43,12 +47,12 @@
  
     <a-scene >
       
-      <a-sphere position="27.1 -5.58  4.725" id='sphere1' radius="1.5" color="#FFC65D" handle-events></a-sphere>
-      <a-image  position="28 -5.58  4.725" id= "baozhantext1"  visible="false" src="img/baozhantext1.png" height="20" width="20"  ></a-image>
+      <a-sphere id='sphere1'  position="27.1 -5.58  4.725" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      <a-image  id= "baozhantext1" position="28 -5.58  4.725"   visible="false" src="img/baozhantext1.png" height="20" width="20"  ></a-image>
       
       
-      <a-sphere position="8 0 -24" radius="2" color="#FFC65D"  handle-events></a-sphere>
-      
+      <a-sphere id='sphere2'  position="16.62035 3.79003 25.8461" radius="1.5" color="#FFC65D"  handle-events></a-sphere>
+      <a-image  id= "baozhantext2" position="17 4 26"   visible="false" src="img/baozhantext2.png" height="20" width="20"  ></a-image>
 
      
       <a-sphere position="2 -4 20" radius="2" color="#FFC65D" handle-events></a-sphere>
