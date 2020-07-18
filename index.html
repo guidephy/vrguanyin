@@ -28,12 +28,13 @@
   <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
   </div>
   
-  
-  	<div style="text-align:center;"  >
+    <div  data-role="content" id="answer1" style='visibility:hidden'>
+  	<div style="text-align:center;" >
   		
-    <input type="text"  style='visibility:hidden' style="text-align:center;" id="answer1" placeholder="請輸入咒語" >  
-    <button id="sendBtn"  style='visibility:hidden' onclick="sendAns()" >送出答案</button>
-    </div>  
+    <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入咒語" >  
+    <button id="sendBtn"  onclick="sendAns()" >送出答案</button>
+    </div> 
+    </div>
   
  
     <div data-role="footer" data-position="fixed" data-theme="b">
@@ -75,7 +76,6 @@
      }else if(i==6){
        document.getElementById("indeximg").src="img/index/index-6.png";
        document.getElementById("nextBtn").style.visibility='hidden';
-       document.getElementById("sendBtn").style.visibility='visible';
        document.getElementById("answer1").style.visibility='visible';
        
      }
