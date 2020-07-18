@@ -1,0 +1,54 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VR遊觀音</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src=jquery-2.2.4.min.js></script>
+
+</head>
+
+
+
+<body>
+  <div style="text-align:center;" >
+              <h1>VR遊觀音</h1>
+        </div>
+        
+  <div  >
+
+   <iframe id="framelink" width="100%" height="80%" src="https://guidephy.github.io/vrguanyin/baozhan" frameborder="0" style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
+    <div style="text-align:center;" >
+    <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入密碼">  
+    <button id="sendBtn" onclick="sendAns()" >送出答案</button>
+    </div>  
+  </div>
+  
+
+    
+   <script>
+
+   function sendAns(){
+      if(document.getElementById("answer1").value=="124"){
+     alert("yes");
+     document.getElementById("framelink").src="https://guidephy.github.io/vrguanyin/smen";  
+           alert("移動到新的地點-石門水庫移民新村");    
+     }else if(document.getElementById("answer1").value=="2125"){
+     alert("yes");   
+     alert("新關卡建立中，請期待"); 
+     
+     }else{ 
+       
+           alert("請不要亂猜，從線索中找資料")  
+     };
+    }
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
