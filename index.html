@@ -18,7 +18,7 @@
   <div style="text-align:center;">
 	  
   <img id="indeximg" src="img/index/index-1.png" width="60%"><br>
-  <button id="nextBtn" onclick="next()" >Next</button>
+  <button id="nextBtn" onclick="nextFunction()" >Next</button>
   </div>
   	<div id="answerblock" style='visibility:hidden' style="text-align:center;" >
   		
@@ -45,7 +45,7 @@
            alert("請不要亂猜，可輸入「提示」，我會給你引導")  
      };
     }
-	function next(){
+	function nextFunction(){
 		iM=iM+1;
 		if(iM==2){
 			document.getElementById("indeximg").src="img/index/index-2.png"; 
