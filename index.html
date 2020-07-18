@@ -8,33 +8,26 @@
   <script src=jquery-2.2.4.min.js></script>
 
 </head>
-	
-    
 
 
 <body>
   <div style="text-align:center;" >
               <h1>VR遊觀音</h1>
   </div>
-	
-  <div style="text-align:center;">
-	  
-  <img id="indeximg" src="img/index/index-1.png" width="60%"><br>
-  <button id="nextBtn" onclick="nextFunction()" >Next</button>
-	    <button id="sendBtn" onclick="sendAns()"  >送出答案</button>
-  </div>
-	
-    <div id="answerblock" style='visibility:hidden' style="text-align:center;" >
-  		
+  <img id="indeximg" src="img/index/index-1.jpg" width="100%">
+  <div>
+  	<div style="text-align:center;" >
+  		<button id="nextBtn" onclick="next()" >Next</button>
     <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入咒語" >  
-  
+    <button id="sendBtn" onclick="sendAns()" >送出答案</button>
     </div>  
- 
+  </div>
 
-<script>
+    <script>
 
     var iM=1;
- function sendAns(){
+
+   function sendAns(){
       if(document.getElementById("answer1").value=="5269"){
      alert("yes");
       
@@ -48,32 +41,9 @@
            alert("請不要亂猜，可輸入「提示」，我會給你引導")  
      };
     };
-  
-	function nextFunction(){
-		alert("error");
-		iM=iM+1;
-		if(iM==2){
-			document.getElementById("indeximg").src="img/index/index-2.png"; 
-		}else if(iM==3){
-			document.getElementById("indeximg").src="img/index/index-3.png"; 
-		}else if(iM==4){
-			document.getElementById("indeximg").src="img/index/index-4.png"; 
-		}else if(iM==5{
-			document.getElementById("indeximg").src="img/index/index-5.png"; 
-		}else if(iM==6){
-			  document.getElementById("indeximg").src="img/index/index-6.png"; 
-			  document.getElementById("nextBtn").style.visibility='hidden';
-			  document.getElementById("answerblock").style.visibility='visible';
-		}else{
-		alert("error");
-			
-		};
 
-	};
      
-   </script>	
-	
-	
+   </script>
 
 
 </body>
