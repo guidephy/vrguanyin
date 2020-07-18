@@ -1,0 +1,116 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VR遊觀音</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel=stylesheet href=jquery.mobile-1.4.5.min.css>
+  <script src=jquery-2.2.4.min.js></script>
+  <script src=jquery.mobile-1.4.5.min.js></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+</head>
+
+
+<body>
+  
+   <div data-role="page">
+  
+   <div data-role="header" data-position="fixed">
+        <h1>VR遊觀音</h1>
+   </div>
+  
+
+  <div style="text-align:center;" style='visibility:hidden' >
+  <img id="indeximg" src="img/baozhan/baozhan-7.png" width="90%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
+  <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
+  </div>
+  
+    <div  data-role="content" id="answerdiv" style='visibility:hidden'>
+    <div style="text-align:center;" >
+      
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="請輸入線索" data-inline="true" >  
+    <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
+    </div> 
+    </div>
+  
+ 
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>&copy;Pgjqua</h4>
+    </div>
+     
+    </div>
+    <script>
+
+    var i=1;
+
+   function sendAns(){
+     
+      
+           if(document.getElementById("answer1").value=="水庫移民"){
+     alert("沒錯，當時有一批人從石門水庫移民到附近，因此那裡稱為石門水庫移民新村");
+     alert("我們到移民新村吧!");
+      
+           
+        location.href='https://guidephy.github.io/vrguanyin/play5'
+     }else if(document.getElementById("answer1").value=="提示"){
+        
+     alert("丁和己分別是天干中第幾個數字呢?"); 
+     
+     }else{ 
+       
+           alert("請不要亂猜，可輸入「提示」，我會給你引導")  
+     };  
+     
+    };
+      
+    function next(){
+      i=i+1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-8.png";
+       
+       document.getElementById("backBtn").style.visibility='visible';
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-11.png";
+     }else if(i==6){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-12.png";
+       
+        document.getElementById("nextBtn").style.visibility='hidden';
+       document.getElementById("answerdiv").style.visibility='visible';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-8.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/baozhan/ibaozhan-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-11.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/baozhan/baozhan-7.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
+     }
+    };
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
