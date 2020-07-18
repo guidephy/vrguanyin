@@ -8,6 +8,48 @@
   <script src=jquery-2.2.4.min.js></script>
 
 </head>
+	
+    <script>
+
+    var iM=1;
+ function sendAns(){
+      if(document.getElementById("answer1").value=="5269"){
+     alert("yes");
+      
+           alert("移動到新的地點");    
+     }else if(document.getElementById("answer1").value=="提示"){
+        
+     alert("咒語是4個數字，箭題是數字筆劃的方向喔"); 
+     
+     }else{ 
+       
+           alert("請不要亂猜，可輸入「提示」，我會給你引導")  
+     };
+    };
+  
+	function nextFunction(){
+		alert("error");
+		iM=iM+1;
+		if(iM==2){
+			document.getElementById("indeximg").src="img/index/index-2.png"; 
+		}else if(iM==3){
+			document.getElementById("indeximg").src="img/index/index-3.png"; 
+		}else if(iM==4){
+			document.getElementById("indeximg").src="img/index/index-4.png"; 
+		}else if(iM==5{
+			document.getElementById("indeximg").src="img/index/index-5.png"; 
+		}else if(iM==6){
+			  document.getElementById("indeximg").src="img/index/index-6.png"; 
+			  document.getElementById("nextBtn").style.visibility='hidden';
+			  document.getElementById("answerblock").style.visibility='visible';
+		}else{
+		alert("error");
+			
+		};
+
+	};
+     
+   </script>
 
 
 <body>
@@ -29,47 +71,6 @@
     </div>  
  
 
-    <script>
-
-    //var iM=1;
- function sendAns(){
-      if(document.getElementById("answer1").value=="5269"){
-     alert("yes");
-      
-           alert("移動到新的地點");    
-     }else if(document.getElementById("answer1").value=="提示"){
-        
-     alert("咒語是4個數字，箭題是數字筆劃的方向喔"); 
-     
-     }else{ 
-       
-           alert("請不要亂猜，可輸入「提示」，我會給你引導")  
-     };
-    };
-  
-	function nextFunction(){
-		alert("error");
-		/*iM=iM+1;
-		if(iM==2){
-			document.getElementById("indeximg").src="img/index/index-2.png"; 
-		}else if(iM==3){
-			document.getElementById("indeximg").src="img/index/index-3.png"; 
-		}else if(iM==4){
-			document.getElementById("indeximg").src="img/index/index-4.png"; 
-		}else if(iM==5{
-			document.getElementById("indeximg").src="img/index/index-5.png"; 
-		}else if(iM==6){
-			  document.getElementById("indeximg").src="img/index/index-6.png"; 
-			  document.getElementById("nextBtn").style.visibility='hidden';
-			  document.getElementById("answerblock").style.visibility='visible';
-		}else{
-		alert("error");
-			
-		};
-
-	};
-     */
-   </script>
 
 
 </body>
