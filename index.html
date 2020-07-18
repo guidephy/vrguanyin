@@ -20,8 +20,6 @@
   <img id="indeximg" src="img/index/index-1.png" width="60%">
   <button id="nextBtn" onclick="next()" >Next</button>
   </div>
-
-
   	<div id="answerblock" style='visibility:hidden' style="text-align:center;" >
   		
     <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入咒語" >  
@@ -31,7 +29,7 @@
 
     <script>
 
-    var i=1;
+    var iM=1;
 
    function sendAns(){
       if(document.getElementById("answer1").value=="5269"){
@@ -48,19 +46,22 @@
      };
     }
 	function next(){
-		i=i+1;
-		if(i==2){
+		iM=iM+1;
+		if(iM==2){
 			document.getElementById("indeximg").src="img/index/index-2.png"; 
-		}else if(i==3){
+		}else if(iM==3){
 			document.getElementById("indeximg").src="img/index/index-3.png"; 
-		}else if(i==4){
+		}else if(iM==4){
 			document.getElementById("indeximg").src="img/index/index-4.png"; 
-		}else if(i==5{
+		}else if(iM==5{
 			document.getElementById("indeximg").src="img/index/index-5.png"; 
-		}else if(i==6){
+		}else if(iM==6){
 			  document.getElementById("indeximg").src="img/index/index-6.png"; 
 			  document.getElementById("nextBtn").style.visibility='hidden';
 			  document.getElementById("answerblock").style.visibility='visible';
+		}else{
+		alert("error");
+			
 		}
 
 	}
