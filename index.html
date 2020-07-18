@@ -16,11 +16,12 @@
   </div>
   <div style="text-align:center;" >
   <img id="indeximg" src="img/index/index-1.png" width="70%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' >Back</button>
   <button id="nextBtn" onclick="next()" >Next</button>
   </div>
   
   
-  	<div style="text-align:center;" >
+  	<div style="text-align:center;" style='visibility:hidden' >
   		
     <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入咒語" >  
     <button id="sendBtn" onclick="sendAns()" >送出答案</button>
@@ -51,6 +52,8 @@
       i=i+1;
      if(i==2){
        document.getElementById("indeximg").src="img/index/index-2.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
      }else if(i==3){
        document.getElementById("indeximg").src="img/index/index-3.png";
      }else if(i==4){
@@ -59,7 +62,27 @@
        document.getElementById("indeximg").src="img/index/index-5.png";
      }else if(i==6){
        document.getElementById("indeximg").src="img/index/index-6.png";
-       alert("ok");
+       document.getElementById("nextBtn").style.visibility='hidden';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/index/index-2.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/index/index-3.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/index/index-4.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/index/index-5.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/index/index-1.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
      }
     };
 
