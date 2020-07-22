@@ -1,0 +1,136 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VR遊觀音</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel=stylesheet href=jquery.mobile-1.4.5.min.css>
+  <script src=jquery-2.2.4.min.js></script>
+  <script src=jquery.mobile-1.4.5.min.js></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+</head>
+
+
+<body>
+  
+   <div data-role="page">
+  
+   <div data-role="header" data-position="fixed">
+        <h1>VR遊觀音</h1>
+   </div>
+  
+
+  <div style="text-align:center;" style='visibility:hidden' >
+  <img id="indeximg" src="img/sachu/sachu-7.png" width="90%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
+  <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
+  </div>
+  
+    <div  data-role="content" id="answerdiv" style='visibility:hidden'>
+    <div style="text-align:center;" >
+      
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="請輸入三張紙代表的意思" data-inline="true" >  
+    <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
+    </div> 
+    </div>
+  
+ 
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>&copy;Pgjqua</h4>
+    </div>
+     
+    </div>
+    <script>
+
+    var i=1;
+
+   function sendAns(){
+     
+      
+           if(document.getElementById("answer1").value=="fulongshan"||document.getElementById("answer1").value=="FULONGSHAN"){
+     alert("FULONGSHAN? 福龍山?");
+     alert("新關卡建立中，請期待");
+  
+        //location.href='https://guidephy.github.io/vrguanyin/play11';
+             
+     }else if(document.getElementById("answer1").value=="ngshalonfu"||document.getElementById("answer1").value=="NGSHALONFU"){
+     alert("想法沒錯喔，但請注意石頭堆的順序!");
+
+     }else if(document.getElementById("answer1").value=="提示"){
+
+      var j=0;
+      j=j+1;
+
+      if(j==1){
+        alert("石頭上的圖樣的英文分別怎麼拼呢");
+
+      }else if(j==2){
+        alert("取出每個英文單字的字首並依序排序");
+
+      }else if(j==3){
+         alert("順序可以從石頭堆去推出來喔");
+
+         j=0;
+      }else{
+        alert("");
+      };
+        
+
+     
+     }else{ 
+       
+           alert("請不要亂猜，可輸入「提示」，我會給你引導")  
+     };  
+     
+    };
+      
+    function next(){
+      i=i+1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/sachu/sachu-8.png";
+       
+       document.getElementById("backBtn").style.visibility='visible';
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/sachu/sachu-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/sachu/sachu-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/sachu/sachu-11.png";
+     }else if(i==6){
+       document.getElementById("indeximg").src="img/sachu/sachu-12.png";
+       
+        document.getElementById("nextBtn").style.visibility='hidden';
+       document.getElementById("answerdiv").style.visibility='visible';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/sachu/sachu-8.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/sachu/sachu-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/sachu/sachu-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/sachu/sachu-11.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/sachu/sachu-7.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
+     }
+    };
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
