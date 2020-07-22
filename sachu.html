@@ -1,0 +1,104 @@
+</!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <title>保障宮</title>
+ 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+
+
+    <script>
+    
+           AFRAME.registerComponent('handle-events', {
+        init: function () {
+          var el = this.el;  // <a-box>
+          el.addEventListener('mouseenter', function () {
+            if(this.id=='sphere1'){
+            el.setAttribute('color', '#e7c5e5');
+          //document.getElementById("baozhantext1").setAttribute('visible', 'true');
+              alert('主祀為開基媽祖娘娘，相傳由福建湄州分靈，安奉於現在廟的原址。');
+            
+            }else if(this.id=='sphere2'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('保障宮的內外有兩對非常長的大石龍柱，大概有三樓高。直徑含龍頭共6尺6寸，整支無接方式雕刻，現今龍柱紀錄無人能比，為"天下第一支');
+            
+            }else if(this.id=='sphere3'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('密碼第三位:保障宮共擁有幾根龍柱?');
+            }else if(this.id=='sphere4'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('密碼第一位:中間3座神像由上而下分別什麼殿 1、凌宵寶殿、三官寶殿、聖母寶殿 2、凌宵寶殿、臨水宮、觀音巖 3、北極殿、凌宵寶殿、元帥府 4、武聖殿、三官寶殿、保神農殿');
+            }else if(this.id=='sphere5'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('主祀的媽祖金身，為清聖祖康熙廿三年（1684年）自湄洲天后宮請來的「媽祖大媽娘娘」。新廟於1994年6月17日動工，至2005年12月完工。');
+            }else if(this.id=='sphere6'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('韋陀及伽藍尊者，係來自大陸東石，以紅樟木雕刻，基座長7尺7寸；二尊神尊均出自名家雕刻，與四大龍柱均為保障宮之寶。');
+            }else if(this.id=='sphere7'){
+            el.setAttribute('color', '#e7c5e5');
+              alert('這裡可以求籤文，讓媽祖指引迷惑。咦！籤筒上所有的抽屜都能打開，但最下面的抽屜卻被上了3位的密碼鎖。不知道密碼是什麼?');
+            }else if(this.id=='sphere8'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('中間9座神像由上而下右而左分別為上層「北極殿、凌宵寶殿、元帥府」，中層「武聖殿、三官寶殿、保神農殿」，下層「臨水宮、聖母寶殿、觀音巖」。');
+            }else if(this.id=='sphere9'){
+            el.setAttribute('color', '#e7c5e5');
+              alert('密碼第二位:宮內神明多的眼花撩亂，但是宮內最重要的主祀是誰呢? 1、關聖帝君 2、媽祖娘娘 3、註生娘娘 4、玉皇大帝');
+            }
+            
+          });
+          
+          el.addEventListener('mouseleave', function () {
+              //el.setAttribute('visible', 'ture'); 
+           // document.getElementById("baozhantext1").setAttribute('visible', 'false');
+           
+          });
+          
+        } 
+      });
+     
+     
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+
+<body>
+ 
+    <a-scene vr-mode-ui="enabled:  false">
+      
+      <a-sphere id='sphere1'  position="27.1 -5.58  4.725" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      <a-image  id= "baozhantext1" position="20 6.49565 3.25951"  rotation="0 -90 0" visible="false" src="img/baozhantext1.png" height="15" width="15"  ></a-image>
+      
+      <a-sphere id='sphere2'  position="16 3.6 25" radius="1.5" color="#FFC65D"  handle-events></a-sphere>
+
+     
+      <a-sphere id='sphere3'  position="-25.51514 -4 13.48438" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+   
+      <a-sphere id='sphere4'  position="22.006 10.40393 17.33514" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere5'  position="12.15416 -11.4586 2.76843" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere6'   position="-15.54216 0.11738 25" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere7'  position="-17.34415 -7.03338 -10.08456" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere8'  position="25.25145 -3.58579 -15.07402" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere9'  position="-0.37399 -6.56554 -24.1799" radius="1.5" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sky src="img/sachu.jpg" radius="30"></a-sky>
+         <a-camera><a-cursor></a-cursor></a-camera>
+    </a-scene>
+
+
+
+
+</body>
+
+
+</html>
