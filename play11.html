@@ -1,0 +1,105 @@
+  
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VR遊觀音</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel=stylesheet href=jquery.mobile-1.4.5.min.css>
+  <script src=jquery-2.2.4.min.js></script>
+  <script src=jquery.mobile-1.4.5.min.js></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+</head>
+
+
+<body>
+  
+   <div data-role="page">
+  
+   <div data-role="header" data-position="fixed">
+        <h1>VR遊觀音</h1>
+   </div>
+  
+
+  <div style="text-align:center;" style='visibility:hidden' >
+  <img id="indeximg" src="img/gancyuan/gancyuan-1.png" width="90%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
+  <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
+  </div>
+  
+    <div  data-role="content" id="answerdiv" style='visibility:hidden'>
+    <div style="text-align:center;" >
+      
+    <button id="sendBtn"  onclick="sendAns()" style='visibility:hidden' >我準備好出發了</button>
+    </div> 
+    </div>
+  
+ 
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>&copy;Pgjqua</h4>
+    </div>
+     
+    </div>
+    <script>
+
+    var i=1;
+
+   function sendAns(){
+     
+      
+           alert("一起移動到甘泉寺吧");
+         
+          location.href='https://guidephy.github.io/vrguanyin/play12-gancyuan'    
+     
+    };
+      
+    function next(){
+      i=i+1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-2.png";
+       
+       document.getElementById("backBtn").style.visibility='visible';
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-3.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-4.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-5.png";
+     }else if(i==6){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-6.png";
+       document.getElementById("nextBtn").style.visibility='hidden';
+       document.getElementById("answerdiv").style.visibility='visible';
+       document.getElementById("sendBtn").style.visibility='visible';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-2.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-3.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-4.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-5.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-1.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
+     }
+    };
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
