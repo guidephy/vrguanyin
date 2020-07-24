@@ -1,0 +1,131 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VR遊觀音</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel=stylesheet href=jquery.mobile-1.4.5.min.css>
+  <script src=jquery-2.2.4.min.js></script>
+  <script src=jquery.mobile-1.4.5.min.js></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+</head>
+
+
+<body>
+  
+   <div data-role="page">
+  
+   <div data-role="header" data-position="fixed">
+        <h1>VR遊觀音</h1>
+   </div>
+  
+
+  <div style="text-align:center;" style='visibility:hidden' >
+  <img id="indeximg" src="img/gancyuan/gancyuan-7.png" width="90%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
+  <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
+  </div>
+  
+    <div  data-role="content" id="answerdiv" style='visibility:hidden'>
+    <div style="text-align:center;" >
+      
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="燈籠的文字和圖案要表達什麼線索呢?" data-inline="true" >  
+    <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
+    </div> 
+    </div>
+  
+ 
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>&copy;Pgjqua</h4>
+    </div>
+     
+    </div>
+    <script>
+
+    var i=1;
+    var j=0;
+
+   function sendAns(){
+     
+      
+           if(document.getElementById("answer1").value=="lighthouse"||document.getElementById("answer1").value=="LIGHTHOUSE"){
+     alert("LIGHTHOUSE? 燈籠?");
+    
+  
+        location.href='https://guidephy.github.io/vrguanyin/play14';
+             
+     }else if(document.getElementById("answer1").value=="提示"){
+
+     
+      j=j+1;
+
+      if(j==1){
+        alert("燈籠上的圖案有鼠、牛、虎、兔、龍、蛇、馬、羊、猴、雞");
+
+      }else if(j==2){
+        alert("將每個英文字母依燈籠上的生肖做重新排序");
+
+         j=0;
+      }else{
+        alert("");
+      };
+        
+
+     
+     }else{ 
+       
+           alert("請不要亂猜，可輸入「提示」，我會給你引導")  
+     };  
+     
+    };
+      
+    function next(){
+      i=i+1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-8.png";
+       
+       document.getElementById("backBtn").style.visibility='visible';
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-11.png";
+     }else if(i==6){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-12.png";
+       
+        document.getElementById("nextBtn").style.visibility='hidden';
+       document.getElementById("answerdiv").style.visibility='visible';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-8.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-11.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/gancyuan/gancyuan-7.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
+     }
+    };
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
