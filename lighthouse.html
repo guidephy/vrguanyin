@@ -1,0 +1,102 @@
+</!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  <title>甘泉寺</title>
+ 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+
+
+    <script>
+    
+           AFRAME.registerComponent('handle-events', {
+        init: function () {
+          var el = this.el;  // <a-box>
+          el.addEventListener('mouseenter', function () {
+            if(this.id=='sphere1'){
+            el.setAttribute('color', '#e7c5e5');
+          //document.getElementById("baozhantext1").setAttribute('visible', 'true');
+              alert('第一位密碼:下列哪一個是甘泉寺廟方認定的文獻？ A.這裡從古至今除了這裡的居民在這，沒有其他的觀光客，所以為了人民的生計而蓋的。 B.因為在溪中撿到一顆浮有觀世音菩薩的石頭，而覺得這件事一定是天意，所以大家集資蓋了這座寺廟。 C.因為大家看到觀音現身，故蓋觀音廟祭拜。');
+            
+            }else if(this.id=='sphere2'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('這是光明燈柱。 光明燈自古以來，一直被當作有效的改運方法流傳至今。');
+            
+            }else if(this.id=='sphere3'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('一樓正殿主祀觀世音菩薩，正殿前面供桌有擺放幾顆民眾捐獻的石頭，石頭上也浮現有形似「觀世音菩薩」的聖像');
+            }else if(this.id=='sphere4'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('第三位數:下面哪一個是甘泉寺一樓的主祀？ A.玉皇大帝 B.聖母娘娘 C.觀世音菩薩 D.關聖帝君');
+            }else if(this.id=='sphere5'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('石觀音有眾多版本，根據廟方的文獻指出，咸豐10年竹北有一名農家，在某天返家途中，發現溪中有一顆近似佛像的石塊，之後農家將石塊撿回家，並建竹草庵奉祀，稱為石觀音。');
+            }else if(this.id=='sphere6'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('第二位密碼:觀音鄉特有的觀音出水日是在哪一天？ A.農曆2月13日 B.農曆4月22日 C.農曆6月15日 D.農曆8月15日');
+            }else if(this.id=='sphere7'){
+            el.setAttribute('color', '#e7c5e5');
+              alert('從這個門走出去就會通往另一個甘泉寺的著名地點，此地有一水窟湧出一道清泉，水清澈如鏡，飲之甘甜如飴，因此稱為甘泉井。');
+            }else if(this.id=='sphere8'){
+             el.setAttribute('color', '#e7c5e5');
+              alert('觀音區的每年農曆4月22日為觀音出水日，為全臺獨有的神誕紀念日，是為了紀念鄉民於水中發現石觀音的日子。');
+            }else if(this.id=='sphere9'){
+            el.setAttribute('color', '#e7c5e5');
+              alert('燈籠的燈還沒有點亮，但它的開關被上了密碼鎖，來試試看怎麼解開它，並點亮燈籠來看看吧');
+            }
+            
+          });
+          
+          el.addEventListener('mouseleave', function () {
+              //el.setAttribute('visible', 'ture'); 
+           // document.getElementById("baozhantext1").setAttribute('visible', 'false');
+           
+          });
+          
+        } 
+      });
+     
+     
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+
+<body>
+ 
+    <a-scene vr-mode-ui="enabled:  false">
+      
+      <a-sphere id='sphere1'   position="-25.09719 -11.73875 8.68625" radius="1" color="#FFC65D" handle-events></a-sphere>
+  
+      <a-sphere id='sphere2'  position="20.67393 -4.78286 -11.42456" radius="1" color="#FFC65D"  handle-events></a-sphere>
+                                                                                
+      <a-sphere id='sphere3'  position="4.16373 -5.74858 25" radius="1" color="#FFC65D" handle-events></a-sphere>
+                                                                                            
+      <a-sphere id='sphere4'  position="-19.99468 -5.86125 -15.20941" radius="1" color="#FFC65D" handle-events></a-sphere>
+                                                                                                
+      <a-sphere id='sphere5'  position="-3.35631 -0.47214 25"radius="1"   color="#FFC65D" handle-events></a-sphere>
+
+      <a-sphere id='sphere6'  position="2.32755 13.82272 -8.57579" radius="1" color="#FFC65D" handle-events></a-sphere>
+                                                                              
+      <a-sphere id='sphere7'  position="21.19457 -3.81989 3.36625" radius="1" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere8'  position="18.54359 0.52666 18.36896" radius="1" color="#FFC65D" handle-events></a-sphere>
+      
+      <a-sphere id='sphere9'  position="24.25697 9.731 3.3881" radius="1" color="#FFC65D" handle-events></a-sphere>
+                                                                                 
+      <a-sky src="img/lighthouse.jpg" radius="30"></a-sky>
+         <a-camera><a-cursor></a-cursor></a-camera>
+    </a-scene>
+
+
+
+
+</body>
+
+
+</html>
