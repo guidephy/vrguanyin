@@ -11,6 +11,13 @@
 
 
     <script>
+      
+      pitchObject.rotation.x -= deltaX * 0.5
+yawObject.rotation.y -= deltaY * 0.5;
+this.touchStart = {
+  x: evt.touches[0].pageX,
+  y: evt.touches[0].pageY
+};
       /*
     
            AFRAME.registerComponent('handle-events', {
