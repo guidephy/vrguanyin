@@ -1,0 +1,137 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VR遊觀音</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel=stylesheet href=jquery.mobile-1.4.5.min.css>
+  <script src=jquery-2.2.4.min.js></script>
+  <script src=jquery.mobile-1.4.5.min.js></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+</head>
+
+
+<body>
+  
+   <div data-role="page">
+  
+   <div data-role="header" data-position="fixed">
+        <h1>VR遊觀音</h1>
+   </div>
+  
+
+  <div style="text-align:center;" style='visibility:hidden' >
+  <img id="indeximg" src="img/lighthouse/lighthouse-7.png" width="90%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
+  <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
+  </div>
+  
+    <div  data-role="content" id="answerdiv" style='visibility:hidden'>
+    <div style="text-align:center;" >
+      
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="地上的符號要表達什麼線索呢?" data-inline="true" >  
+    <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
+    </div> 
+    </div>
+  
+ 
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>&copy;Pgjqua</h4>
+    </div>
+     
+    </div>
+    <script>
+
+    var i=1;
+    var j=0;
+
+   function sendAns(){
+     
+      
+           if(document.getElementById("answer1").value=="7QQ3229M+C6"||document.getElementById("answer1").value=="7qq3229m+c6"){
+     alert("7QQ3229M+C6?  這好像是一個地圖定位的代碼");
+    
+  
+        location.href='https://guidephy.github.io/vrguanyin/play17';
+             
+     }else if(document.getElementById("answer1").value=="2Q+366MCC9"||document.getElementById("answer1").value=="2q+366mcc9"){
+     alert("想法沒錯喔，但請從燈塔的位置看那串符號!");
+
+     }else if(document.getElementById("answer1").value=="提示"){
+
+     
+      j=j+1;
+
+      if(j==1){
+        alert("地上共11個符號，你有沒有發現這些符號和九宮格的形狀有點像呢?");
+
+      }else if(j==2){
+        alert("地上的形狀會對應到九宮格的字，例如口代表的是+，L代表的是7");
+
+      }else if(j==3){
+         alert("光是從燈塔的方向照出來的，所以要站在燈塔的位置看符號才能得到對的資訊喔!");
+
+         j=0;
+      }else{
+        alert("");
+      };
+        
+
+     
+     }else{ 
+       
+           alert("請不要亂猜，可輸入「提示」，我會給你引導")  
+     };  
+     
+    };
+      
+    function next(){
+      i=i+1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-8.png";
+       
+       document.getElementById("backBtn").style.visibility='visible';
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-11.png";
+     }else if(i==6){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-12.png";
+       
+        document.getElementById("nextBtn").style.visibility='hidden';
+       document.getElementById("answerdiv").style.visibility='visible';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-8.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-9.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-10.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-11.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/lighthouse/lighthouse-7.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
+     }
+    };
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
