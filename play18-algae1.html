@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">    
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src=jquery-2.2.4.min.js></script>
-
+  <script>
+    alert("現在是滿潮，什麼都看不到，是不是應該換個時間再過來看?") ;
+   </script>
 </head>
 
 
@@ -20,7 +22,8 @@
 <iframe id="framelink" width="100%" height="80%" src="https://guidephy.github.io/vrguanyin/algaefull" frameborder="0" style="border:none;" allowvr="yes" allow="vr; xr; accelerometer; magnetometer; gyroscope; autoplay;" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="" ></iframe>
    
 <div style="text-align:center;" >
-    <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入最佳的時間">  
+    <input type="text"  style="text-align:center;" id="answer1" placeholder="請輸入最佳過來的時間">  
+       <button id="sendBtn2" onclick="sendBtn2()" >查詢潮汐時間</button>
     <button id="sendBtn" onclick="sendAns()" >送出答案</button>
     </div>  
   </div>
@@ -30,14 +33,22 @@
    <script>
 
    function sendAns(){
-      if(document.getElementById("answer1").value=="15:02"){
-     alert("我們等下午15:02再過來看吧!") 
+      if(document.getElementById("answer1").value=="16:11"||document.getElementById("answer1").value=="1611"||document.getElementById("answer1").value=="16:11"){
+     alert("我們等下午16:11再過來看吧!") 
      location.href='https://guidephy.github.io/vrguanyin/play18-algae2';  
       
-     }else{ 
+     }else if(document.getElementById("answer1").value=="04:05"||document.getElementById("answer1").value=="0405"||document.getElementById("answer1").value=="04:05"){
+              alert("那時候天都還沒亮呢，根本看不到什麼東西吧!") 
+              
+              }else{ 
        
-           alert("請不要亂猜，從線索中找資料")  
+           alert("請不要亂猜，可查詢潮汐表再來作答")  
      };
+    }
+     
+    function sendBtn2(){
+      location.href='https://guidephy.github.io/vrguanyin/play18-tide';  
+      
     }
 
      
