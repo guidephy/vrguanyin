@@ -29,9 +29,11 @@
                             })
                         }
        </script>
+    
+    
     <script>
     
-    AFRAME.registerComponent('handle-events', {
+           AFRAME.registerComponent('handle-events', {
         init: function () {
           var el = this.el;  // <a-box>
           el.addEventListener('mouseenter', function () {
@@ -77,7 +79,8 @@
             }
             
           });
-             el.addEventListener('mouseleave', function () {
+          
+          el.addEventListener('mouseleave', function () {
               //el.setAttribute('visible', 'ture'); 
            // document.getElementById("baozhantext1").setAttribute('visible', 'false');
            
@@ -85,8 +88,10 @@
           
         } 
       });
-          </script>
-
+     
+     
+    </script>
+    
     </head>
 
 
