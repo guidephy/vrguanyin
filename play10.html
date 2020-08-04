@@ -32,6 +32,7 @@
     <div style="text-align:center;" >
       
     <input type="text"  style="text-align:center;" id="answer1"  placeholder="石頭上的圖案要表達什麼線索呢?" data-inline="true" >  
+    <button id="tipBtn"  onclick="sendTip()" data-inline="true" >提示?</button>
     <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
     </div> 
     </div>
@@ -46,7 +47,26 @@
 
     var i=1;
     var j=0;
+   function sendTip(){
+     
+      j=j+1;
 
+      if(j==1){
+        alert("石頭上的圖樣的英文分別怎麼拼呢");
+
+      }else if(j==2){
+        alert("取出每個英文單字的字首並依序排序");
+
+      }else if(j==3){
+         alert("順序可以從石頭堆去推出來喔");
+
+         j=0;
+      }else{
+        alert("");
+      };
+        
+     
+   }
    function sendAns(){
      
       
