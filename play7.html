@@ -45,7 +45,7 @@
     <script>
 
     var i=1;
-
+    var j=0;
    function sendAns(){
      
       
@@ -55,22 +55,31 @@
         location.href='https://guidephy.github.io/vrguanyin/play8';
              
      }else if(document.getElementById("answer1").value=="提示"){
-
-      var j=0;
-      j=Math.floor(Math.random()*8);
+ 
+      
+      j=j+1;
 
       if(j==1){
-        alert("其中一張紙，是從「造詞」去分析");
+        alert("這三張文字卡分別代表三個字");
+        
 
       }else if(j==2){
-        alert("其中一張紙，是從「字的組成元素」去分析");
-
-      }else if(j==3){
-         alert("其中一張紙，是從「注音」去分析");
-
-      }else if(j==4||j==5){
+       
         alert("這三張文字卡的解謎規則是不同的，請從紙上8個字的關聯性，分別解出代表什麼字");
 
+      }else if(j==3){
+       
+        alert("第一張紙，是從「字的組成元素」去分析");
+
+      }else if(j==4){
+         
+         alert("第二張紙，是從「注音」去分析");
+
+      }else if(j==5){
+        
+        alert("第三張紙，是從「造詞」去分析");
+        
+       
       }else{
         alert("這三張文字卡分別代表三個字");
       };
