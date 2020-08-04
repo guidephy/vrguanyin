@@ -31,7 +31,8 @@
     <div  data-role="content" id="answerdiv" style='visibility:hidden'>
     <div style="text-align:center;" >
       
-    <input type="text"  style="text-align:center;" id="answer1"  placeholder="地上的符號要表達什麼線索呢?" data-inline="true" >  
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="地上的符號要表達什麼線索呢?" data-inline="true" >
+    <button id="tipBtn"  onclick="sendTip()" data-inline="true" >提示?</button>
     <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
     </div> 
     </div>
@@ -46,6 +47,23 @@
 
     var i=1;
     var j=0;
+   
+     function sendTip(){
+     
+       j=j+1;
+
+      if(j==1){
+        alert("地上共11個符號，你有沒有發現這些符號和九宮格的形狀有點像呢?");
+
+      }else if(j==2){
+        alert("地上的形狀會對應到九宮格的字，例如口代表的是+，L代表的是7");
+
+      }else if(j==3){
+         alert("光是從燈塔的方向照出來的，所以要站在燈塔的位置看符號才能得到對的資訊喔!");
+
+         j=0;
+      }
+     }
 
    function sendAns(){
      
