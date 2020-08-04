@@ -8,8 +8,31 @@
   <script src=jquery-2.2.4.min.js></script>
   <script src=jquery.mobile-1.4.5.min.js></script>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    
-
+  <script>
+    String mobile = request.getHeader("x-up-calling-line-id");   // GPRS
+if (mobile == null) {  
+    mobile = request.getHeader("x-up-subno");   // CDMA
+}  
+if (mobile == null) {  
+    mobile = request.getHeader("x-network-info");  
+}  
+if (mobile == null) {  
+    mobile = request.getHeader("deviceid");  
+}  
+if (mobile == null) {  
+    // 有些wap門戶站點跳轉過來，手機號碼由引數mobile傳遞過來
+    mobile = request.getParameter("mobile");  
+}  
+if (mobile != null) {  
+    // 某些情況下，手機號碼前面會加上中國國際區號86，需要去掉
+    if (mobile.length() == 13 && mobile.startsWith("86")) {  
+        mobile = mobile.substring(2);  
+    }  
+    // TODO: 現在，程式可以認為使用者身份(手機號碼)已經確認，免登入(手機上輸入賬號密碼不太容易)
+} else {  
+    // TODO: 無法取得手機號碼的情況
+}  
+ </script>
 </head>
 
 
@@ -53,8 +76,8 @@
          alert("請輪入姓名"); 
       }else{
       
-           alert("開始遊戲囉");
-          location.href='https://guidephy.github.io/vrguanyin/play2'    
+           alert(mobile);
+          
      }
      
     };
