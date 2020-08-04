@@ -31,7 +31,8 @@
     <div  data-role="content" id="answerdiv" style='visibility:hidden'>
     <div style="text-align:center;" >
       
-    <input type="text"  style="text-align:center;" id="answer1"  placeholder="請輸入三張紙代表的意思" data-inline="true" >  
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="請輸入三張紙代表的意思" data-inline="true" >
+    <button id="tipBtn"  onclick="sendTip()" data-inline="true" >提示?</button>
     <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
     </div> 
     </div>
@@ -46,6 +47,39 @@
 
     var i=1;
     var j=0;
+      
+   function sendTip(){
+     
+       j=j+1;
+
+      if(j==1){
+        alert("這三張文字卡分別代表三個字");
+        
+
+      }else if(j==2){
+       
+        alert("這三張文字卡的解謎規則是不同的，請從紙上8個字的關聯性，分別解出代表什麼字");
+
+      }else if(j==3){
+       
+        alert("第一張紙，是從「字的組成元素」去分析");
+
+      }else if(j==4){
+         
+         alert("第二張紙，是從「注音」去分析");
+
+      }else if(j==5){
+        
+        alert("第三張紙，是從「造詞」去分析");
+        
+       
+      }else{
+        alert("這三張文字卡分別代表三個字");
+      };
+        
+
+   }
+      
    function sendAns(){
      
       
