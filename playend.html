@@ -28,7 +28,10 @@
   
     <div style="text-align:center;" >
       
-    <button id="sendBtn"  onclick="sendAns()" >填寫問卷</button>
+   
+    <button id="sendBtn"  onclick="sendAns1()" data-inline="true" >填寫問卷1</button>
+    <button id="sendBtn"   onclick="sendAns2()" data-inline="true" >填寫問卷2/button>
+    </div> 
     </div> 
    
   
@@ -38,14 +41,21 @@
     </div>
     <script>
 
-    var i=1;
 
-   function sendAns(){
+
+   function sendAns1(){
      
       
-           
-         
-          location.href='https://docs.google.com/forms/d/e/1FAIpQLSdg-se-zslh-Y1mxGn_TpgPYnifsAyj30LhT1Gl7RZQoO-9mA/viewform?usp=sf_link'    
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSdg-se-zslh-Y1mxGn_TpgPYnifsAyj30LhT1Gl7RZQoO-9mA/viewform?usp=sf_link', '1')  
+     
+     
+    };
+   
+   function sendAns2(){
+     
+      
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSfXgu_zciBwmoIwKbs07LGznMeagZyu3B_9wQpeDpyo79W4OQ/viewform?usp=sf_link', '2')  
+     
      
     };
       
